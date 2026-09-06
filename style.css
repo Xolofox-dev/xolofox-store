@@ -176,4 +176,76 @@ header {
 }
 .toast.show { display: block; }
 .notice { text-align: center; color: #718096; padding: 20px; background: white; border-radius: 8px; width: 100%; }
-footer { background: #0f2c59; color: #a0aec0; text-align: center; padding: 20px; margin-top: 60px; }
+/* === DESAIN FOOTER INFORMASI BARU === */
+footer {
+    background-color: #0f2c59;
+    color: #e2e8f0;
+    padding: 40px 20px 20px 20px;
+    margin-top: 50px;
+    font-size: 14px;
+    border-top: 4px solid #3182ce;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer-box h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.footer-box h3 span {
+    color: #4299e1;
+}
+.footer-box h4 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.footer-box p {
+    line-height: 1.8;
+    color: #cbd5e0;
+}
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-box ul li {
+    margin-bottom: 8px;
+}
+.footer-box ul li a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.footer-box ul li a:hover {
+    color: #4299e1;
+    padding-left: 5px;
+}
+.footer-credit {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #a0aec0;
+    font-size: 12px;
+}
+
+/* Kerapian Otomatis Jika Dibuka di Layar Lebar/PC */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-box {
+        flex: 1;
+    }
+}
