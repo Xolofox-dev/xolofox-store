@@ -45,7 +45,8 @@ function renderCategories(){
 function setCat(c){activeCategory=c;renderCategories();renderProducts()}
 function renderProducts(){
   const q=$("#search").value.toLowerCase();
-  const list=products.filter(p=>(activeCategory==="Semua"||p.category===activeCategory)&&(p.name.toLowerCase().includes(q)||p.category.toLowerCase().includes(q)));
+  const list = products.filter(p => (activeCategory === "Semua" || p.category === activeCategory) &&
+(p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)));
   $("#products").innerHTML=list.length?list.map(p=>`<article class="product"><div class="product-img"><span class="tag">${p.category}</span>${p.image_url?`<img src="${p.image_url}" alt="">`:"🛍️"}</div><div class="product-info"><div class="product-cat">${p.category}</div><h3>${p.name}</h3><div class="rating">★★★★★</div><div class="price">${rupiah(p.price)}</div><button class="add" onclick="addToCart(${p.id})">+ Tambah ke Keranjang</button></div></article>`).join(""):'<div class="notice" style="grid-column:1/-1">Produk tidak ditemukan.</div>';
 }
 async function loadStore(){
