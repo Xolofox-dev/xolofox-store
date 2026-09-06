@@ -176,76 +176,130 @@ header {
 }
 .toast.show { display: block; }
 .notice { text-align: center; color: #718096; padding: 20px; background: white; border-radius: 8px; width: 100%; }
-/* === DESAIN FOOTER INFORMASI BARU === */
+/* === DESAIN FOOTER PREMIUM & CLEAN === */
 footer {
-    background-color: #0f2c59;
+    background-color: #0b1a30; /* Biru gelap eksklusif */
     color: #e2e8f0;
-    padding: 40px 20px 20px 20px;
-    margin-top: 50px;
+    padding: 50px 24px 25px 24px;
+    margin-top: 60px;
     font-size: 14px;
-    border-top: 4px solid #3182ce;
+    border-top: 3px solid #3182ce;
 }
+
 .footer-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 35px;
+    text-align: left; /* Teks rapi rata kiri di HP */
 }
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .footer-box h3 {
-    color: white;
-    font-size: 22px;
-    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 24px;
     font-weight: 700;
+    letter-spacing: 0.5px;
 }
+
 .footer-box h3 span {
     color: #4299e1;
 }
+
 .footer-box h4 {
-    color: white;
+    color: #ffffff;
     font-size: 16px;
-    margin-bottom: 12px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 5px;
-    display: inline-block;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
 }
+
+/* Garis bawah tipis estetik pada judul section footer */
+.footer-box h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #3182ce;
+    border-radius: 2px;
+}
+
 .footer-box p {
-    line-height: 1.8;
+    line-height: 1.6;
+    color: #a0aec0;
+}
+
+/* Menyeimbangkan posisi icon kontak */
+.kontak-toko p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: #cbd5e0;
 }
+
+.kontak-toko p b {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Merapikan link Menu Utama agar tidak berwarna ungu pekat */
 .footer-box ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-.footer-box ul li {
-    margin-bottom: 8px;
-}
+
 .footer-box ul li a {
     color: #cbd5e0;
     text-decoration: none;
-    transition: 0.2s;
-}
-.footer-box ul li a:hover {
-    color: #4299e1;
-    padding-left: 5px;
-}
-.footer-credit {
-    max-width: 1200px;
-    margin: 30px auto 0 auto;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    color: #a0aec0;
-    font-size: 12px;
+    display: inline-block;
+    transition: all 0.2s ease;
 }
 
-/* Kerapian Otomatis Jika Dibuka di Layar Lebar/PC */
+.footer-box ul li a:hover {
+    color: #4299e1;
+    transform: translateX(4px); /* Efek geser halus saat disentuh */
+}
+
+/* Bagian Hak Cipta bawah yang clean */
+.footer-credit {
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    color: #718096;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+.footer-credit b {
+    color: #a0aec0;
+}
+
+/* === RESPONSIVE LAYOUT UNTUK TABLET & PC === */
 @media (min-width: 768px) {
     .footer-container {
         flex-direction: row;
         justify-content: space-between;
+        gap: 50px;
     }
     .footer-box {
         flex: 1;
+    }
+    .info-toko {
+        flex: 1.5; /* Memberikan ruang lebih luas untuk deskripsi toko */
     }
 }
