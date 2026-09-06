@@ -42,7 +42,7 @@ header {
 }
 .logo { color: white; font-size: 24px; font-weight: 700; text-decoration: none; }
 .logo span { color: #4299e1; }
-.nav-links a { color: #e2e8f0; text-decoration: none; margin-right: 15px; }
+.nav-links a { color: #e2e8f0; text-decoration: none; margin-right: 20px; font-size: 14px; }
 .nav-actions { display: flex; gap: 10px; align-items: center; }
 .badge { background: #e53e3e; color: white; padding: 2px 6px; border-radius: 50%; font-size: 12px; }
 
@@ -56,7 +56,7 @@ header {
 .hero-content h1 { font-size: 36px; margin: 15px 0; }
 .hero-content p { color: #cbd5e0; margin-bottom: 25px; }
 
-/* === 4 SERVICE FEATURES LAYOUT (SINKRON GAMBAR) === */
+/* SERVICE FEATURES */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -106,7 +106,7 @@ header {
     border-radius: 20px;
     cursor: pointer;
 }
-.cat.active { background: #3182ce; color: white; }
+.cat.active { background: #0f2c59; color: white; }
 
 /* PRODUCTS GRID */
 .products-grid {
@@ -127,7 +127,7 @@ header {
 .price-row { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 15px;}
 .price { font-weight: 700; color: #2b6cb0; }
 
-/* MODALS POPUP */
+/* MODALS */
 .modal {
     display: none;
     position: fixed;
@@ -154,7 +154,7 @@ header {
 .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
 .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e0; border-radius: 6px; }
 
-/* DRAWER SIDEBAR */
+/* DRAWER */
 .drawer {
     display: none;
     position: fixed;
@@ -167,7 +167,46 @@ header {
 .drawer-content { padding: 20px; height: 100%; display: flex; flex-direction: column; }
 .drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
 
-/* NOTIFICATIONS & FOOTER */
+/* === FOOTER 4 KOLOM CLEAN === */
+footer {
+    background-color: #0f2c59;
+    color: #cbd5e0;
+    padding: 40px 20px 25px 20px;
+    margin-top: 60px;
+    font-size: 14px;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.footer-box h3 { color: white; font-size: 20px; margin-bottom: 12px; font-weight: 700; }
+.footer-box h3 span { color: #4299e1; }
+.footer-box h4 { color: white; font-size: 15px; margin-bottom: 12px; font-weight: 600; }
+.footer-box p { line-height: 1.6; }
+.footer-box ul { list-style: none; padding: 0; }
+.footer-box ul li { margin-bottom: 8px; }
+.footer-box ul li a { color: #cbd5e0; text-decoration: none; }
+.footer-box ul li a:hover { color: white; }
+.footer-credit {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #a0aec0;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* OTHER */
 .toast {
     position: fixed;
     bottom: 20px; left: 50%; transform: translateX(-50%);
@@ -176,130 +215,3 @@ header {
 }
 .toast.show { display: block; }
 .notice { text-align: center; color: #718096; padding: 20px; background: white; border-radius: 8px; width: 100%; }
-/* === DESAIN FOOTER PREMIUM & CLEAN === */
-footer {
-    background-color: #0b1a30; /* Biru gelap eksklusif */
-    color: #e2e8f0;
-    padding: 50px 24px 25px 24px;
-    margin-top: 60px;
-    font-size: 14px;
-    border-top: 3px solid #3182ce;
-}
-
-.footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    text-align: left; /* Teks rapi rata kiri di HP */
-}
-
-.footer-box {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.footer-box h3 {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.footer-box h3 span {
-    color: #4299e1;
-}
-
-.footer-box h4 {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 8px;
-    margin-bottom: 5px;
-}
-
-/* Garis bawah tipis estetik pada judul section footer */
-.footer-box h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 35px;
-    height: 2px;
-    background-color: #3182ce;
-    border-radius: 2px;
-}
-
-.footer-box p {
-    line-height: 1.6;
-    color: #a0aec0;
-}
-
-/* Menyeimbangkan posisi icon kontak */
-.kontak-toko p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #cbd5e0;
-}
-
-.kontak-toko p b {
-    color: #ffffff;
-    font-weight: 500;
-}
-
-/* Merapikan link Menu Utama agar tidak berwarna ungu pekat */
-.footer-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-box ul li a {
-    color: #cbd5e0;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.2s ease;
-}
-
-.footer-box ul li a:hover {
-    color: #4299e1;
-    transform: translateX(4px); /* Efek geser halus saat disentuh */
-}
-
-/* Bagian Hak Cipta bawah yang clean */
-.footer-credit {
-    max-width: 1100px;
-    margin: 40px auto 0 auto;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    text-align: center;
-    color: #718096;
-    font-size: 12px;
-    letter-spacing: 0.3px;
-}
-
-.footer-credit b {
-    color: #a0aec0;
-}
-
-/* === RESPONSIVE LAYOUT UNTUK TABLET & PC === */
-@media (min-width: 768px) {
-    .footer-container {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 50px;
-    }
-    .footer-box {
-        flex: 1;
-    }
-    .info-toko {
-        flex: 1.5; /* Memberikan ruang lebih luas untuk deskripsi toko */
-    }
-}
