@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Xolôfox.id - Admin</title><link rel="stylesheet" href="/admin.css"></head>
+<body>
+<header><div><b>Xolôfox<span>.id</span></b><small> ADMIN DASHBOARD</small></div><div><a href="/">← Toko</a><button id="logout">Logout</button></div></header>
+<main>
+<h1>Dashboard</h1><div class="stats" id="stats"></div>
+<section class="panel"><div class="panel-head"><h2>Produk</h2><button class="primary" onclick="openProduct()">+ Tambah Produk</button></div><div class="table-wrap"><table><thead><tr><th>Produk</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="products"></tbody></table></div></section>
+<section class="panel"><div class="panel-head"><h2>Pesanan</h2><button onclick="loadOrders()">↻ Refresh</button></div><div class="table-wrap"><table><thead><tr><th>Order</th><th>Pelanggan</th><th>Total</th><th>Pembayaran</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="orders"></tbody></table></div></section>
+</main>
+<div class="modal" id="productModal"><div class="box"><button class="close" onclick="closeProduct()">×</button><h2 id="productTitle">Tambah Produk</h2><form id="productForm"><input type="hidden" id="pid"><label>Nama<input id="pname" required></label><label>Kategori<select id="pcat" required></select></label><label>Harga (Rupiah)<input id="pprice" type="number" min="0" required></label><label>Stok<input id="pstock" type="number" min="0" required></label><label>URL gambar (opsional)<input id="pimage"></label><label>Deskripsi<textarea id="pdesc"></textarea></label><label>Rating<input id="prating" type="number" min="0" max="5" step=".1" value="5"></label><button class="primary" type="submit">Simpan</button></form></div></div>
+<div id="toast"></div><script src="/admin.js"></script></body></html>
