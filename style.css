@@ -8,6 +8,8 @@ body {
     background-color: #f7fafc;
     color: #2d3748;
 }
+
+/* BUTTONS */
 .btn {
     padding: 10px 20px;
     border-radius: 6px;
@@ -22,6 +24,7 @@ body {
 .btn.outline:hover { background-color: #edf2f7; }
 .btn-block { width: 100%; margin-top: 15px; }
 
+/* NAVBAR */
 header {
     background: #0f2c59;
     position: sticky;
@@ -43,6 +46,7 @@ header {
 .nav-actions { display: flex; gap: 10px; align-items: center; }
 .badge { background: #e53e3e; color: white; padding: 2px 6px; border-radius: 50%; font-size: 12px; }
 
+/* HERO BANNER */
 .hero {
     background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
     color: white;
@@ -52,6 +56,30 @@ header {
 .hero-content h1 { font-size: 36px; margin: 15px 0; }
 .hero-content p { color: #cbd5e0; margin-bottom: 25px; }
 
+/* === 4 SERVICE FEATURES LAYOUT (SINKRON GAMBAR) === */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.feature-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border: 1px solid #e2e8f0;
+}
+.feature-icon { font-size: 24px; }
+.feature-text h4 { font-size: 14px; color: #2d3748; margin-bottom: 2px; }
+.feature-text p { font-size: 12px; color: #718096; }
+
+/* SECTIONS */
 .section-produk, .section-orders {
     max-width: 1200px;
     margin: 40px auto;
@@ -80,6 +108,7 @@ header {
 }
 .cat.active { background: #3182ce; color: white; }
 
+/* PRODUCTS GRID */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -98,6 +127,7 @@ header {
 .price-row { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 15px;}
 .price { font-weight: 700; color: #2b6cb0; }
 
+/* MODALS POPUP */
 .modal {
     display: none;
     position: fixed;
@@ -124,6 +154,7 @@ header {
 .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
 .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e0; border-radius: 6px; }
 
+/* DRAWER SIDEBAR */
 .drawer {
     display: none;
     position: fixed;
@@ -136,6 +167,7 @@ header {
 .drawer-content { padding: 20px; height: 100%; display: flex; flex-direction: column; }
 .drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
 
+/* NOTIFICATIONS & FOOTER */
 .toast {
     position: fixed;
     bottom: 20px; left: 50%; transform: translateX(-50%);
@@ -143,5 +175,5 @@ header {
     border-radius: 30px; display: none; z-index: 2000;
 }
 .toast.show { display: block; }
-.notice { text-align: center; color: #718096; padding: 20px; background: white; border-radius: 8px; }
+.notice { text-align: center; color: #718096; padding: 20px; background: white; border-radius: 8px; width: 100%; }
 footer { background: #0f2c59; color: #a0aec0; text-align: center; padding: 20px; margin-top: 60px; }
