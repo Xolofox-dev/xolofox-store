@@ -12,19 +12,20 @@
 </head>
 <body>
 <header>
-  <nav class="navbar">
-    <a href="/" class="logo">Xolôfox<span>.id</span></a>
-    <div class="nav-links">
-      <a href="#produk">Produk</a><a href="#kategori">Kategori</a><a href="#pesanan">Pesanan</a>
-    </div>
-    <div class="nav-actions">
-      <span id="userLabel"></span>
-      <button class="btn outline" id="authBtn">👤 Login</button>
-      <button class="btn blue cart-btn" id="cartBtn">🛒 Keranjang <span id="cartBadge" class="badge">0</span></button>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <a href="/" class="logo">Xolofox<span>.id</span></a>
+        <div class="nav-links">
+            <a href="#produk">Produk</a>
+            <span id="userLabel" style="cursor: pointer; font-weight: bold; color: #4a5568; margin-right: 15px;"></span>
+        </div>
+        <div class="nav-actions">
+            <!-- Tombol Login / Keluar Otomatis -->
+            <button id="authBtn" class="btn outline">👤 Login</button>
+            <button id="cartBtn" class="btn blue">🛒 Keranjang <span id="cartBadge" class="badge">0</span></button>
+        </div>
+    </nav>
 </header>
-
+    
 <main>
 <section class="hero"><div class="hero-box">
   <div class="hero-content">
