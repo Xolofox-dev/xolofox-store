@@ -11,10 +11,10 @@
     <!-- NAVBAR / ATASAN -->
     <header>
         <nav class="navbar">
-            <a href="/" class="logo">Xolofox<span>.id</span></a>
+            <a href="/" class="logo">Xolôfox<span>.id</span></a>
             <div class="nav-links">
                 <a href="#produk">Produk</a>
-                <span id="userLabel" style="cursor: pointer; font-weight: bold; color: #3182ce; margin-left: 15px;"></span>
+                <span id="userLabel" style="cursor: pointer; font-weight: bold; color: #63b3ed; margin-left: 15px;"></span>
             </div>
             <div class="nav-actions">
                 <button id="authBtn" class="btn outline">👤 Login</button>
@@ -28,46 +28,99 @@
         <section class="hero">
             <div class="hero-content">
                 <span class="eyebrow">WELCOME TO XOLOFOX.ID</span>
-                <h1>Temukan Produk Favoritmu</h1>
+                <h1>Temukan Produk<br>Favoritmu</h1>
                 <p>Belanja berbagai produk pilihan dengan kualitas terbaik dan harga yang bersahabat.</p>
                 <a href="#produk" class="btn blue">Belanja Sekarang →</a>
+            </div>
+            <!-- Ilustrasi tas belanja mini khas sisi kanan banner -->
+            <div class="hero-image">
+                <span style="font-size: 80px;">🛍️</span>
+            </div>
+        </section>
+
+        <!-- 4 KOTAK LAYANAN UNGGULAN -->
+        <section class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🏆</span>
+                <div class="feature-text">
+                    <h4>Produk Original</h4>
+                    <p>100% produk asli</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🛡️</span>
+                <div class="feature-text">
+                    <h4>Garansi Resmi</h4>
+                    <p>Aman dan terpercaya</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🚚</span>
+                <div class="feature-text">
+                    <h4>Pengiriman Cepat</h4>
+                    <p>Proses cepat dan aman</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎧</span>
+                <div class="feature-text">
+                    <h4>Customer Support</h4>
+                    <p>Siap membantu kamu</p>
+                </div>
             </div>
         </section>
 
         <!-- KATEGORI & PENCARIAN -->
         <section id="produk" class="section-produk">
-            <h2>Produk Pilihan</h2>
-            <p>Temukan produk terbaik untukmu</p>
+            <div class="section-header">
+                <h2>Produk Pilihan</h2>
+                <p>Temukan produk terbaik untukmu</p>
+            </div>
             
             <div class="search-box">
+                <span class="search-icon">🔍</span>
                 <input type="text" id="search" placeholder="Cari produk...">
             </div>
             
             <div id="kategori" class="categories-row">
-                <!-- Tombol kategori akan diisi oleh JavaScript -->
+                <!-- Tombol kategori diisi otomatis oleh JavaScript -->
             </div>
             
             <div id="products" class="products-grid">
-                <!-- Daftar produk akan diisi oleh JavaScript -->
+                <!-- Daftar produk diisi otomatis oleh JavaScript -->
             </div>
         </section>
 
         <!-- RIWAYAT PESANAN -->
         <section class="section-orders">
-            <h2>Pesanan Saya</h2>
-            <p>Riwayat transaksi akunmu</p>
+            <div class="section-header">
+                <h2>Pesanan Saya</h2>
+                <p>Riwayat transaksi akunmu</p>
+            </div>
             <div id="orders">
-                <!-- Riwayat order akan diisi oleh JavaScript -->
+                <div class="notice">Login untuk melihat pesanan.</div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER LENGKAP -->
     <footer>
-        <p>&copy; 2026 Xolofox.id. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Xolôfox.id</h3>
+                <p>Belanja mudah, cepat, dan nyaman hanya di toko kami.</p>
+            </div>
+            <div class="footer-menu">
+                <h4>Menu</h4>
+                <a href="#produk">Produk</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Xolofox.id. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <!-- MODAL / DIALOG POPUP LOGIN & DAFTAR -->
+    <!-- MODAL POPUP LOGIN & DAFTAR -->
     <div id="authModal" class="modal">
         <div class="modal-content">
             <span class="close" data-close="#authModal">&times;</span>
@@ -97,7 +150,7 @@
         </div>
     </div>
 
-    <!-- MODAL / POPUP CHECKOUT -->
+    <!-- MODAL CHECKOUT -->
     <div id="checkoutModal" class="modal">
         <div class="modal-content">
             <span class="close" data-close="#checkoutModal">&times;</span>
@@ -130,25 +183,20 @@
         </div>
     </div>
 
-    <!-- DRAWER / MENU GESER KERANJANG -->
+    <!-- DRAWER KERANJANG -->
     <div id="cartDrawer" class="drawer">
         <div class="drawer-content">
             <div class="drawer-header">
                 <h3>Keranjang Belanja</h3>
                 <span class="close" data-close="#cartDrawer">&times;</span>
             </div>
-            <div id="cartList">
-                <!-- Item keranjang akan diisi oleh JavaScript -->
-            </div>
-            <div id="cartFooter">
-                <!-- Total harga & tombol checkout -->
-            </div>
+            <div id="cartList"></div>
+            <div id="cartFooter"></div>
         </div>
     </div>
 
     <div id="toast" class="toast"></div>
 
-    <!-- MENGHUBUNGKAN DENGAN FILE SCRIPT UTAMA -->
     <script src="app.js"></script>
 </body>
 </html>
