@@ -13,7 +13,9 @@
         <nav class="navbar">
             <a href="/" class="logo">Xolôfox<span>.id</span></a>
             <div class="nav-links">
+                <a href="#">Beranda</a>
                 <a href="#produk">Produk</a>
+                <a href="#">Tentang Kami</a>
                 <span id="userLabel" style="cursor: pointer; font-weight: bold; color: #4299e1; margin-left: 15px;"></span>
             </div>
             <div class="nav-actions">
@@ -85,46 +87,57 @@
         </section>
 
         <!-- RIWAYAT PESANAN -->
-        <section class="section-orders">
+        <section class="section-orders" id="orders">
             <h2>Pesanan Saya</h2>
             <p>Riwayat transaksi akunmu</p>
-            <div id="orders">
+            <div id="orders-list">
                 <!-- Diisi otomatis oleh JavaScript -->
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <!-- FOOTER INFORMASI & CREDIT LENGKAP -->
+    <!-- FOOTER 4 KOLOM SAMA PERSIS -->
     <footer>
         <div class="footer-container">
             <div class="footer-box info-toko">
                 <h3>Xolôfox<span>.id</span></h3>
-                <p>Belanja berbagai produk pilihan dengan kualitas terbaik, aman, dan harga bersahabat.</p>
+                <p>Belanja mudah, cepat, dan nyaman hanya di Xolôfox.id.</p>
+            </div>
+            
+            <div class="footer-box">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#produk">Produk</a></li>
+                    <li><a href="#kategori">Kategori</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h4>Informasi</h4>
+                <ul>
+                    <li><a href="#">Cara Belanja</a></li>
+                    <li><a href="#">Pembayaran</a></li>
+                    <li><a href="#">Pengiriman</a></li>
+                    <li><a href="#">Retur & Refund</a></li>
+                </ul>
             </div>
             
             <div class="footer-box kontak-toko">
-                <h4>Hubungi Kami</h4>
-                <p>📞 <b>WhatsApp:</b> +62 857-7912-6072</p>
-                <p>✉️ <b>Email:</b> xofoloxoficial@gmail.com</p>
-                <p>📍 <b>Lokasi:</b> Bekasi, Indonesia</p>
-            </div>
-
-            <div class="footer-box menu-toko">
-                <h4>Menu Utama</h4>
-                <ul>
-                    <li><a href="#produk">Daftar Produk</a></li>
-                    <li><a href="#orders">Pesanan Saya</a></li>
-                </ul>
+                <h4>Kontak</h4>
+                <p>📞 +62 812-3456-7890</p>
+                <p>✉️ info@xolofox.id</p>
+                <p>📍 Indonesia</p>
             </div>
         </div>
         
         <div class="footer-credit">
-            <p>&copy; 2026 <b>Xolofox.id</b>. Created by Xolofox-Dev. All Rights Reserved.</p>
+            <p>&copy; 2026 Xolôfox.id. All Rights Reserved.</p>
         </div>
     </footer>
-    
-    <!-- MODAL DIALOG POPUP LOGIN & DAFTAR -->
+
+    <!-- MODAL POPUP LOGIN & DAFTAR -->
     <div id="authModal" class="modal">
         <div class="modal-content">
             <span class="close" data-close="#authModal">&times;</span>
