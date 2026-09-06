@@ -3,98 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Xolôfox.id - Online Store</title>
-
-    <link rel="stylesheet" href="./style.css">
-    <script src="./config.js"></script>
-</head>
+    <title>Xolofox.id - Online Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <nav class="navbar">
-        <a href="/" class="logo">Xolofox<span>.id</span></a>
-        <div class="nav-links">
-            <a href="#produk">Produk</a>
-            <span id="userLabel" style="cursor: pointer; font-weight: bold; color: #4a5568; margin-right: 15px;"></span>
+
+    <!-- NAVBAR / ATASAN -->
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">Xolofox<span>.id</span></a>
+            <div class="nav-links">
+                <a href="#produk">Produk</a>
+                <span id="userLabel" style="cursor: pointer; font-weight: bold; color: #3182ce; margin-left: 15px;"></span>
+            </div>
+            <div class="nav-actions">
+                <button id="authBtn" class="btn outline">👤 Login</button>
+                <button id="cartBtn" class="btn blue">🛒 Keranjang <span id="cartBadge" class="badge">0</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO BANNER -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">WELCOME TO XOLOFOX.ID</span>
+                <h1>Temukan Produk Favoritmu</h1>
+                <p>Belanja berbagai produk pilihan dengan kualitas terbaik dan harga yang bersahabat.</p>
+                <a href="#produk" class="btn blue">Belanja Sekarang →</a>
+            </div>
+        </section>
+
+        <!-- KATEGORI & PENCARIAN -->
+        <section id="produk" class="section-produk">
+            <h2>Produk Pilihan</h2>
+            <p>Temukan produk terbaik untukmu</p>
+            
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Cari produk...">
+            </div>
+            
+            <div id="kategori" class="categories-row">
+                <!-- Tombol kategori akan diisi oleh JavaScript -->
+            </div>
+            
+            <div id="products" class="products-grid">
+                <!-- Daftar produk akan diisi oleh JavaScript -->
+            </div>
+        </section>
+
+        <!-- RIWAYAT PESANAN -->
+        <section class="section-orders">
+            <h2>Pesanan Saya</h2>
+            <p>Riwayat transaksi akunmu</p>
+            <div id="orders">
+                <!-- Riwayat order akan diisi oleh JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Xolofox.id. All Rights Reserved.</p>
+    </footer>
+
+    <!-- MODAL / DIALOG POPUP LOGIN & DAFTAR -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="#authModal">&times;</span>
+            <div class="modal-tabs">
+                <button id="loginTab" class="tab-btn active">Login</button>
+                <button id="registerTab" class="tab-btn">Daftar</button>
+            </div>
+            <h3 id="authTitle">Selamat Datang</h3>
+            <p id="authSub">Login untuk melanjutkan belanja.</p>
+            
+            <form id="authForm">
+                <div class="form-group" id="nameGroup" style="display: none;">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="name" placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" required placeholder="contoh@surat.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" required placeholder="Minimal 6 karakter">
+                </div>
+                <div id="formMsg"></div>
+                <button type="submit" id="authSubmit" class="btn blue btn-block">Login</button>
+            </form>
         </div>
-        <div class="nav-actions">
-            <!-- Tombol Login / Keluar Otomatis -->
-            <button id="authBtn" class="btn outline">👤 Login</button>
-            <button id="cartBtn" class="btn blue">🛒 Keranjang <span id="cartBadge" class="badge">0</span></button>
+    </div>
+
+    <!-- MODAL / POPUP CHECKOUT -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="#checkoutModal">&times;</span>
+            <h3>Checkout Pembayaran</h3>
+            <p id="checkoutSummary"></p>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label>Nama Penerima</label>
+                    <input type="text" id="cName" required>
+                </div>
+                <div class="form-group">
+                    <label>No. HP / WhatsApp</label>
+                    <input type="tel" id="cPhone" required placeholder="08xxxxxxxxxx">
+                </div>
+                <div class="form-group">
+                    <label>Alamat Lengkap</label>
+                    <textarea id="cAddress" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Kota</label>
+                    <input type="text" id="cCity" required>
+                </div>
+                <div class="form-group">
+                    <label>Kode Pos</label>
+                    <input type="text" id="cPostal" required>
+                </div>
+                <div id="checkoutMsg"></div>
+                <button type="submit" class="btn blue btn-block">Buat Pesanan & Bayar</button>
+            </form>
         </div>
-    </nav>
-</header>
-    
-<main>
-<section class="hero"><div class="hero-box">
-  <div class="hero-content">
-    <span class="eyebrow">WELCOME TO XOLÔFOX.ID</span>
-    <h1>Temukan Produk<br><span>Favoritmu</span></h1>
-    <p>Belanja berbagai produk pilihan dengan kualitas terbaik dan harga yang bersahabat.</p>
-    <a class="btn blue" href="#produk">Belanja Sekarang →</a>
-  </div>
-  <div class="hero-art">🛍️</div>
-</div></section>
+    </div>
 
-<section class="features">
-  <div class="feature">🏆 <span><b>Produk Original</b><small>100% produk asli</small></span></div>
-  <div class="feature">🛡️ <span><b>Garansi Resmi</b><small>Aman dan terpercaya</small></span></div>
-  <div class="feature">🚚 <span><b>Pengiriman Cepat</b><small>Proses cepat dan aman</small></span></div>
-  <div class="feature">🎧 <span><b>Customer Support</b><small>Siap membantu kamu</small></span></div>
-</section>
+    <!-- DRAWER / MENU GESER KERANJANG -->
+    <div id="cartDrawer" class="drawer">
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <h3>Keranjang Belanja</h3>
+                <span class="close" data-close="#cartDrawer">&times;</span>
+            </div>
+            <div id="cartList">
+                <!-- Item keranjang akan diisi oleh JavaScript -->
+            </div>
+            <div id="cartFooter">
+                <!-- Total harga & tombol checkout -->
+            </div>
+        </div>
+    </div>
 
-<section class="section" id="produk">
-  <div class="section-title"><h2>Produk Pilihan</h2><p>Temukan produk terbaik untukmu</p></div>
-  <div class="search">🔎 <input id="search" placeholder="Cari produk..."></div>
-  <div class="categories" id="kategori"></div>
-  <div class="products" id="products"></div>
-</section>
+    <div id="toast" class="toast"></div>
 
-<section class="section orders-section" id="pesanan">
-  <div class="section-title"><h2>Pesanan Saya</h2><p>Riwayat transaksi akunmu</p></div>
-  <div id="orders"><div class="notice">Login untuk melihat pesanan.</div></div>
-</section>
-</main>
-
-<footer><div class="footer-grid">
-  <div><h3>Xolôfox.id</h3><p>Belanja mudah, cepat, dan nyaman hanya di Xolôfox.id.</p></div>
-  <div><h4>Menu</h4><p>Produk</p><p>Kategori</p><p>Pesanan</p></div>
-  <div><h4>Informasi</h4><p>Pembayaran</p><p>Pengiriman</p><p>Retur & Refund</p></div>
-  <div><h4>Kontak</h4><p>📞 +62 812-3456-7890</p><p>✉️ info@xolofox.id</p></div>
-</div><div class="copy">© 2026 Xolôfox.id. All Rights Reserved.</div></footer>
-
-<div class="modal" id="authModal"><div class="modal-box">
-  <button class="close" data-close="authModal">×</button>
-  <h2 id="authTitle">Selamat Datang 👋</h2><p class="modal-sub" id="authSub">Login untuk melanjutkan belanja.</p>
-  <div class="tabs"><button class="tab active" id="loginTab">Login</button><button class="tab" id="registerTab">Daftar</button></div>
-  <form id="authForm">
-    <div class="form-group" id="nameGroup"><label>Nama Lengkap</label><input id="name" required></div>
-    <div class="form-group"><label>Email</label><input id="email" type="email" required></div>
-    <div class="form-group"><label>Password</label><input id="password" type="password" minlength="6" required></div>
-    <button class="submit" id="authSubmit">Login</button><div class="form-msg" id="formMsg"></div>
-  </form>
-</div></div>
-
-<div class="drawer" id="cartDrawer"><div class="cart">
-  <div class="cart-head"><h2>Keranjang 🛒</h2><button class="close" data-close="cartDrawer">×</button></div>
-  <div id="cartList"></div><div id="cartFooter"></div>
-</div></div>
-
-<div class="modal" id="checkoutModal"><div class="modal-box wide">
-  <button class="close" data-close="checkoutModal">×</button>
-  <h2>Checkout 📦</h2><p class="modal-sub">Isi alamat pengiriman sebelum membayar.</p>
-  <form id="checkoutForm">
-    <div class="two"><div class="form-group"><label>Nama Penerima</label><input id="cName" required></div><div class="form-group"><label>No. HP</label><input id="cPhone" required></div></div>
-    <div class="form-group"><label>Alamat Lengkap</label><textarea id="cAddress" required></textarea></div>
-    <div class="two"><div class="form-group"><label>Kota</label><input id="cCity" required></div><div class="form-group"><label>Kode Pos</label><input id="cPostal" required></div></div>
-    <div class="checkout-summary" id="checkoutSummary"></div>
-    <button class="submit">Buat Pesanan & Bayar</button>
-    <div class="form-msg" id="checkoutMsg"></div>
-  </form>
-</div></div>
-
-<div class="toast" id="toast"></div>
-<script src="./app.js"></script>
+    <!-- MENGHUBUNGKAN DENGAN FILE SCRIPT UTAMA -->
+    <script src="app.js"></script>
 </body>
 </html>
